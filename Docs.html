@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bash for Windows Program - Offline Page</title>
+</head>
+
+<!-- Using internal CSS, because this is only one page. -->
+<style>
+    body {background-color: #242424;}
+    * {font-family: Tahoma; color: #FFFFFF; text-align: center;}
+
+    .btn {text-decoration: none; border: 2px solid black; background-color: #242424; text-align: center; font-family: Tahoma;}
+    .btn:hover {background-color: lime;}
+    .btn:active {background-color: green;}
+</style>
+<body>
+    <h1>Bash for Windows Docs</h1>
+    <a class="btn" href="https://tiktok.com/@winscripter" target="_blank">Our TikTok</a>
+
+    <p>Microsoft Windows has WSL, which is Bash (Linux Terminal, located in C:\Windows\System32\wsl.exe). However, the program takes an incredibly long time to start up.</p>
+    <p>We had to find a program that does the same operation as Microsoft WSL, but it would take way less time to execute.</p>
+    <p>So, we have invented a C# program that runs on .NET Framework, and that is <b>Bash for Windows</b>. It starts up in mere 0.3 seconds!</p>
+    <p>However, this is only version 1.0. There are many commands that are currently missing.</p><br>
+
+    <h1>Using Bash for Windows</h1>
+    <p>You can run bash.exe to start up Bash for Windows. A command-prompt style window pops up, that's your program. If the program cannot succeed some type of operation, try running it as administrator, and it should help.</p>
+    <p>If you need the source code, open SourceCode.txt, or if you have Visual Studio Code installed, you can also run bash.cs.</p>
+    <br>
+
+    <h3>But how do I test this if I am not on Windows?</h3>
+    <p>We know that running this on Linux makes absolutely no sense. But, even if you want to, or you use other type of OS that also doesn't support EXEs or Bash, here's how:</p>
+    <p>1. <a class="btn" href="https://www.tutorialspoint.com/online_csharp_compiler.php" target="_blank">Open online C# Compiler</a></p>
+    <p>2. Paste your code into the compiler.</p>
+    <p>3. Click Execute</p>
+    <i>*Note that the compiler breaks if you run it again. In this state, please, press Ctrl+F5 and confirm website restart. The difference between CTRL+F5 and F5 is that F5 just reloads the page and loads all the caches, whereas CTRL+F5 not only reloads the page, but also clears all the cache. If a compiler keeps permanently trying to execute the program, close the compiler tab, wait about 5 minutes and run it again.</i>
+    <BR><BR>
+
+    <h1>Avoid program errors</h1>
+    <p>If you're getting some errors in your program, and then Windows Error Report screen pops up, telling bash.exe stopped working,<br>1. Make sure the program has privileges to the specified object or file<br>2. Try starting it as administrator<br>3. Don't rename the EXE file, it must be named as bash.exe, all lowercase letters.</b></p><br><br>
+
+    <h1>Possibilities</h1>
+    <p>pwd<br>ps/ps -a/ps -aux<br>rm/rm -r/rm -f/rm -rf<br>cat<br>kill<br>mkdir<br>echo<br>touch<br>ls/ls -l/ls -h (parameter -h doesn't really exist)/ls -hl/ls -lh<br></p><br><br>
+
+    <h1>Linux to Batch</h1>
+    <p>[?] The ones that have the star * in them means they can only run in BAT files.</p>
+    <p>*pwd -> echo %~dp0</p>
+    <p>ps -> tasklist</p>
+    <p>rm -f -> del</p>
+    <p>rm -r -> rmdir / rd</p>
+    <p>rm -rf -> rmdir /s /q &lt;dirname&gt; / rd /s /q &lt;dirname&gt;</p>
+    <p>cat -> for /f %%a in ('Filename') do echo %%a</p>
+    <p>kill 7 / kill 9 -> taskkill /im &lt;process name.exe&gt; /f</p>
+    <p>mkdir -> mkdir</p>
+    <p>echo -> echo</p>
+    <p>touch -> echo. > &lt;Filename&gt;</p>
+    <p>ls &lt;any arg&gt; -> dir</p>
+    <br><br>
+
+    <h1>Compact Experience</h1>
+    <p>The compact experience to this is that, Windows adds the System32 folder to PATH automatically. This means, you can just copy bash.exe and no other file into System32. So next time you can just enter 'bash' and it opens up.</p><br><br>
+    
+    <h1>Questions that may be asked</h1>
+    <p>1. Why isn't CD command working?</p>
+    <p><i>Because that would require way too much code. Probably version 1.1 or 2.0 may address this bug or feature.</i></p><br>
+
+    <p>2. Why can't I create a file using echo STRING > FILE?</p>
+    <p><i>Check the folder permissions, or run a program as administrator.</i></p><br>
+
+    <p>3. I executed the program from CMD, but how do I terminate it from CMD?</p>
+    <p><i>Apart from closing the command prompt completely, you can simply press Ctrl+C without selecting any text. This will print ^C and terminate the application, but not CMD. You can also kill bash.exe in Task Manager.</i></p><br><br>
+
+    <br>
+    <p style="font-size: 14px;">Have any further questions?</p>
+    <p style="font-size: 14px;">Bash for Windows by winscripter<span style="font-size: 32px;">&trade;</span></p>
+</body>
+</html>
